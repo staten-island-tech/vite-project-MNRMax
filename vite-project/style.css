@@ -103,3 +103,11 @@ h2 {
     font-size: 2rem;
     border-radius: 10px;
 }
+#day {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    width: 20rem;
+    height: 5rem;
+    font-size: 2rem;
+}

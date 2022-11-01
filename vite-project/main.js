@@ -65,7 +65,33 @@ const menu = [
     }
 ]
 
-const day = 'tuesday'
+const d = new Date();
+var day = '';
+
+switch (d.getDay()) {
+    case 0:
+        day = 'sunday';
+        break;
+    case 1:
+        day = 'moday';
+        break;
+    case 2:
+        day = 'tuesday';
+        break;
+    case 3:
+        day = 'wednesday';
+        break;
+    case 4:
+        day = 'thursday';
+        break;
+    case 5:
+        day = 'friday';
+        break;
+    case 6:
+        day = 'saturday';
+        break;
+}
+
 const menuDiv = document.querySelector("#menu")
 display(menu)
 
@@ -99,9 +125,8 @@ document.querySelector("#theme-button").addEventListener("click", function () {
 });
 
 function display(array) {
-    array.forEach(item => {
-        const sales = menu.filter(item => item.sales.includes(day));
-        sales.map(x.price => item.price/2)
+    const withSales = array.map(sale)
+    withSales.forEach(item => {
         menuDiv.insertAdjacentHTML (
             "beforeend",
             `<div class="menu-object">
@@ -112,4 +137,9 @@ function display(array) {
             </div>`
         )
     })
+}
+
+function sale(item) {
+    if (item.sales.includes(day)) item.price = item.price/2
+    return item
 }
