@@ -5,7 +5,7 @@ const menu = [
         description: "Juicy Burger",
         image: "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_21/2870431/190524-classic-american-cheeseburger-ew-207p.jpg",
         meat: "beef",
-        sales: ["monday", "tursday"]
+        sales: ["monday", "thursday"]
     },
     {
         name: "Grilled Cheese",
@@ -37,7 +37,7 @@ const menu = [
         description: "Crispy Chicken Tenders",
         image: "https://thecozycook.com/wp-content/uploads/2020/07/Fried-Chicken-Tenders-f.jpg",
         meat: "chicken",
-        sales: ["saturday", "tursday"]
+        sales: ["saturday", "thursday"]
     },
     {
         name: "Steak",
@@ -45,7 +45,7 @@ const menu = [
         description: "Made From Rats Caught in The Kitchen",
         image: "https://www.seriouseats.com/thmb/lBAvOl5D32f_fge1kx8Asver10Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/butter-basted-pan-seared-steaks-recipe-hero-06-03b1131c58524be2bd6c9851a2fbdbc3.jpg",
         meat: "beef",
-        sales: ["friday", "tursday"]
+        sales: ["friday", "thursday"]
     },
     {
         name: "Caesar Salad",
@@ -125,6 +125,7 @@ document.querySelector("#theme-button").addEventListener("click", function () {
 });
 
 function display(array) {
+    console.log(day)
     const withSales = array.map(sale)
     withSales.forEach(item => {
         menuDiv.insertAdjacentHTML (
