@@ -61,7 +61,7 @@ const menu = [
         description: "Delicious Ice Cream",
         image: "https://hips.hearstapps.com/hmg-prod/images/easiest-ever-fruit-and-coconut-ice-cream-1643120950.jpg?crop=0.990xw:0.660xh;0,0.158xh&resize=640:*",
         meat: "none",
-        sales: ["tuesday", "tursday"]
+        sales: ["tuesday", "thursday"]
     }
 ]
 
