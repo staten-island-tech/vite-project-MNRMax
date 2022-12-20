@@ -59,9 +59,8 @@ document.querySelector("#theme-button").addEventListener("click", function () {
 });
 
 function display(array) {
-    console.log(day)
-    const withSales = array.map(sale)
-    withSales.forEach(item => {
+    array.forEach(item => {
+        if (item.sales.includes(day)) item.price = item.price/2
         menuDiv.insertAdjacentHTML (
             "beforeend",
             `<div class="menu-object">
@@ -71,10 +70,6 @@ function display(array) {
                 <p class="menu-object-text">${item.description}</p>
             </div>`
         )
+        if (item.sales.includes(day)) item.price = item.price*2
     })
-}
-
-function sale(item) {
-    if (item.sales.includes(day)) item.price = item.price/2
-    return item
 }
